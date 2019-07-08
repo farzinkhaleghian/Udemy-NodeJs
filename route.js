@@ -29,7 +29,7 @@ const requestHandler = (req,res) =>{
         req.on('end', () => {
             const bodyParser = Buffer.concat(body).toString();
             const user = bodyParser.split('=')[1];
-            console.log(user)
+            console.log(user);
         });
         res.statusCode = 302; 
         res.setHeader('location','/')
